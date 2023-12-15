@@ -31,4 +31,4 @@ $(BIN):
 
 # Clean up
 clean:
-	rm -rf $(BIN) $(TARGET)
+	rm -rf $(BIN) $(TARGET) 

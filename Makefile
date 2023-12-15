@@ -1,3 +1,6 @@
+# Target executable
+TARGET = myprogram # change this !!
+
 # Compiler and flags
 CC = gcc
 CFLAGS = -g -Wall -Werror -pedantic
@@ -10,9 +13,6 @@ BIN = bin
 # Source and object files
 SRCS = $(wildcard $(SRC)/*.c)
 OBJS = $(patsubst $(SRC)/%.c, $(BIN)/%.o, $(SRCS))
-
-# Target executable
-TARGET = myprogram
 
 # Default target
 all: $(TARGET)

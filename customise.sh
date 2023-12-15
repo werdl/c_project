@@ -10,7 +10,7 @@ function input() {
         user_input=$default_value
     fi
 
-    echo "$user_input"
+    eval "$3='$user_input'"
 }
 
 function prepend() {
@@ -30,15 +30,15 @@ function prepend() {
 
 
 printf "Welcome to your new C Project!\n"
-name = $(input "Name:" "myprogram")
+input "Name" "myprogram" name
 
 prepend "TARGET = $name" "Makefile"
 
 printf "#!/bin/bash\n\nmake clean\n" > .git/hooks/pre-push
 
-del = $(input "All done!\nDelete this script? [y/n]:" "n")
+input "All done!\nDelete this script? [y/n]:" "n" del
 
-if [ del -eq "y" ]; then
+if [ $del = "y" ]; then
     rm -rf customise.sh
 fi
 

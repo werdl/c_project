@@ -1,6 +1,3 @@
-# Target executable
-TARGET = myprogram # change this !!
-
 # Compiler and flags
 CC = gcc
 CFLAGS = -g -Wall -Werror -pedantic

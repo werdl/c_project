@@ -14,6 +14,6 @@ Your info goes here...
 ## Compiling
 ```sh
 make
-./myprogram
+./<your program name>
 make clean
 ```
